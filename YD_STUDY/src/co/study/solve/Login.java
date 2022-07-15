@@ -23,8 +23,8 @@ public class Login {
 		int pw = Integer.parseInt(strPwd);		//문자열 > 정수(int)타입으로 변환. Integer.parseInt
 
 		if (id.equals("yedam")) {						// if~ id가 yedam과 일치할 때   
-														// String 은 변수.equals(문자열)로 비교
-			if (pw == 1234) {							// int는 정수이므로 연산자 ==로 비교 
+														// String 은 참조타입으로 변수.equals(문자열)로 비교 
+			if (pw == 1234) {							// int는 기본타입 변수이므로 값을 가짐. ==로 비교 
 				System.out.println("로그인 성공~~~!!!");
 			} else {
 				System.out.println("로그인 실패입니다!");	// 이중 if 구문 이용하여 id가 yedam 이면서 
