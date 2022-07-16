@@ -16,8 +16,10 @@ public class Login {
 	public static void main(String[] args) {
 
 		Scanner scn = new Scanner(System.in);
-
+		
+		System.out.println("아이디를 입력하세요");
 		String id = scn.nextLine();				//문자열(String) 타입으로 id를 키보드 입력 받음
+		System.out.println("패스워드를 입력하세요");
 		String strPwd = scn.nextLine();		    //문자열(String) 타입으로 strpwd를 키보드 입력받음
 
 		int pw = Integer.parseInt(strPwd);		//문자열 > 정수(int)타입으로 변환. Integer.parseInt
