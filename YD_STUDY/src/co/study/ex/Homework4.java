@@ -13,6 +13,7 @@ public class Homework4 {
 		char charValue = 'A';
 		String strValue = "번지";
 		
+		
 		System.out.printf("%s%d%d%s%.1f",charValue,intValue1,intValue3,strValue,((double)intValue4));
 		
 	}
