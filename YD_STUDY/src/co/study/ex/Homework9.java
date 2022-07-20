@@ -16,22 +16,21 @@ public class Homework9 {
 		// 문제출처, 백준(https://www.acmicpc.net/) 14681번 문제
 		System.out.println("x 값을 입력하세요");
 		int x = scn.nextInt();
-		
+
 		System.out.println("y 값을 입력하세요");
 		int y = scn.nextInt();
-		
-		if(x>0&&y>0) {
+
+		if (x > 0 && y > 0) {
 			System.out.println("제 1사분면");
-		} else if (x<0&&y>0){
-				System.out.println("제 2사분면");
-			}else if(x<0&&y<0) {
-				System.out.println("제3사분면");
-		}else if(x>0&&y<0) {
+		} else if (x < 0 && y > 0) {
+			System.out.println("제 2사분면");
+		} else if (x < 0 && y < 0) {
+			System.out.println("제3사분면");
+		} else if (x > 0 && y < 0) {
 			System.out.println("제4사분면");
-		}else {
+		} else {
 			System.out.println("시스템 종료");
 		}
-		
 
 	}
 

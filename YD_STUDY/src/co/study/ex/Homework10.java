@@ -30,8 +30,7 @@ public class Homework10 {
 }
 
 /*
- * 처음에 생각 했던 코드 
- * co.study.ex;
+ * 처음에 생각 했던 코드 co.study.ex;
  * 
  * import java.util.Scanner;
  * 
