@@ -18,7 +18,7 @@ public class Homework10 {
 
 		if (year % 4 == 0) {
 
-			if (year % 100 != 0 || year % 400 != 0) { // 논리 연산자를 이용하면 식을 좀더 간겨라게 할 수 있다.
+			if (year % 100 != 0 || year % 400 != 0) { // 논리 연산자를 이용하면 식을 좀더 간결하게 할 수 있다.
 				System.out.println("입력한 연도인 " + year + "년은 윤년입니다.");
 			}
 

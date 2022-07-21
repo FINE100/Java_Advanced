@@ -1,5 +1,7 @@
 package co.study.ex;
 
+import java.util.Scanner;
+
 public class Homework13 {
 
 	public static void main(String[] args) {
@@ -8,16 +10,20 @@ public class Homework13 {
 		// 2 X 1 = 2
 		// 2 X 2 = 4
 		// 2 X 3 = 6
+		
+		Scanner scn = new Scanner(System.in);
+		System.out.println("첫번째 숫자를 입력하세요");
+		int m = scn.nextInt();
+		System.out.println("두번째 숫자를 입력하세요");
+		int n =  scn.nextInt();
 
-		for (int i = 2; i <= 9; i++) {
-			System.out.println("===== " + i + "단 =====");
-			for (int j = 1; j <= 9; j++) {
-				System.out.println(i + " X " + j + " = " + (i * j));
-
-			}
-
+		for (int i = 1 ; i <=n ; i++) {
+			int j = m;
+			
+			
+			System.out.println(m+" X "+ i + " = "+ (m*i));
 		}
-
 	}
-
 }
+			
+		

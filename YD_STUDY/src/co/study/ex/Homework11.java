@@ -1,5 +1,7 @@
 package co.study.ex;
 
+import java.util.Scanner;
+
 public class Homework11 {
 
 	public static void main(String[] args) {
@@ -8,7 +10,21 @@ public class Homework11 {
 		// 예를 들어, 가위가 주어졌을 때 "이기기 위해선 바위를 내야합니다." 라고 출력하도록 하세요.
 		// 한 단어를 입력받을 경우 Scanner객체의 next() 함수를 사용하면 됩니다.
 
-		// Scanner scn = new Scanner(System.in);
+		 Scanner scn = new Scanner(System.in);
+		 
+		 System.out.println("가위,바위,보 중 입력해주세요");
+		 
+		 String rcp = scn.nextLine();
+		 
+		 switch(rcp) {
+		 case "가위" :
+			 System.out.println("이기기 위해선 바위를 내야합니다."); break;
+		 case "바위" :
+			 System.out.println("이기기 위해선 보를 내야합니다.");break;
+		 case "보" :
+			 System.out.println("이기기 위해선 가위를 내야합니다.");break;
+		 }
+		 
 	}
 
 }
