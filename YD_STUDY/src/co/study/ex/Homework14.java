@@ -19,7 +19,5 @@ public class Homework14 {
 				System.out.println("Q2. arr1[" + i + "] = " + arr1[i]); // 출력
 			}
 		}
-		System.out.println(); // 줄바꿈
-		
 	}
 }
