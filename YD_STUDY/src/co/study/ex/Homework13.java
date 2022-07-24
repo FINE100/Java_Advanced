@@ -15,13 +15,13 @@ public class Homework13 {
 		System.out.println("첫번째 숫자를 입력하세요");
 		int m = scn.nextInt();
 		System.out.println("두번째 숫자를 입력하세요");
-		int n =  scn.nextInt();
+		int n =  scn.nextInt();						// 스캐너로 m과 n 값 입력 받음
 
-		for (int i = 1 ; i <=n ; i++) {
-			int j = m;
+		for (int i = 1 ; i <=n ; i++) {	  // for문 이용, m은 고정된 값이므로 변하는(1,2,3..9) n값만큼 배열 돌림
+			int j = m;					  // 변수 j에 고정된 m 값 받음. 
 			
 			
-			System.out.println(m+" X "+ i + " = "+ (m*i));
+			System.out.println(j +" X "+ i + " = "+ (j*i)); // j * i는 m * n으로 m단의 n번째 곱까지 출력됨.
 		}
 	}
 }

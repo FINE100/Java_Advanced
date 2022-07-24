@@ -18,10 +18,10 @@ public class Homework9 {
 		int x = scn.nextInt();
 
 		System.out.println("y 값을 입력하세요");
-		int y = scn.nextInt();
+		int y = scn.nextInt();					// 값을 직접 입력 받도록 스캐너 이용	
 
-		if (x > 0 && y > 0) {
-			System.out.println("제 1사분면");
+		if (x > 0 && y > 0) {					// 주어진 조건에 맞게 조건문 사용 
+			System.out.println("제 1사분면");		// 논리 연산자 && : 좌, 우 둘다 참일 때 참
 		} else if (x < 0 && y > 0) {
 			System.out.println("제 2사분면");
 		} else if (x < 0 && y < 0) {

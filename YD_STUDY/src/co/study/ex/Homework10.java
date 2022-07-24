@@ -14,15 +14,17 @@ public class Homework10 {
 
 		Scanner scn = new Scanner(System.in);
 		System.out.println("원하시는 연도를 입력해주세요.");
-		int year = scn.nextInt();
+		int year = scn.nextInt();						// 직접 입력 받음
 
-		if (year % 4 == 0) {
+		if (year % 4 == 0) {				// 조건식 1 : year이 4의 배수일 때, 
 
-			if (year % 100 != 0 || year % 400 != 0) { // 논리 연산자를 이용하면 식을 좀더 간결하게 할 수 있다.
+			if (year % 100 != 0 || year % 400 != 0) { // 조건식 2 :  조건식 1을 만족하면서 조건식 2일 때
+													 // 4의 배수이면서 100의 배수가 아닐 때 또는 400의 배수일때
+													// 논리 연산자를 이용하면 식을 좀더 간결하게 할 수 있다.
 				System.out.println("입력한 연도인 " + year + "년은 윤년입니다.");
 			}
 
-		} else {
+		} else {									// 조건식 1과 2 둘다 만족하지 않는 경우일 때
 			System.out.println("입력한 연도인 " + year + "년은 윤년이 아닙니다.");
 
 		}

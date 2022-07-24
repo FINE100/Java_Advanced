@@ -14,15 +14,15 @@ public class Homework11 {
 		 
 		 System.out.println("가위,바위,보 중 입력해주세요");
 		 
-		 String rcp = scn.nextLine();
+		 String rcp = scn.nextLine(); // 가위, 바위, 보 입력 받는 스캐너 사용
 		 
-		 switch(rcp) {
-		 case "가위" :
-			 System.out.println("이기기 위해선 바위를 내야합니다."); break;
+		 switch(rcp) { // switch 조건문 : true, fasle 아님. 문자열, 문자, 정수, 상수 가능. 한번만 작용.
+		 case "가위" : 
+			 System.out.println("이기기 위해선 바위를 내야합니다."); break; // 결과값 출력후 멈추기 위해 break;
 		 case "바위" :
-			 System.out.println("이기기 위해선 보를 내야합니다.");break;
+			 System.out.println("이기기 위해선 보를 내야합니다.");break; // 결과값 출력후 멈추기 위해 break;
 		 case "보" :
-			 System.out.println("이기기 위해선 가위를 내야합니다.");break;
+			 System.out.println("이기기 위해선 가위를 내야합니다.");break; // 결과값 출력후 멈추기 위해 break;
 		 }
 		 
 	}
