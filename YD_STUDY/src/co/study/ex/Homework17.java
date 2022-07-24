@@ -1,4 +1,9 @@
 package co.study.ex;
+/*
+ * 문제) 다음은 키보드로부터 학생수와 각 학생들의 점수를 입력받아서, 
+ * 최고 점수 및 평균 점수를 구하는 프로그램입니다. 
+ * 실행결과를 보고, 알맞게 작성해보세요.
+ */
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -6,11 +11,7 @@ import java.util.Scanner;
 public class Homework17 {
 
 	public static void main(String[] args) {
-		/*
-		 * 문제) 다음은 키보드로부터 학생수와 각 학생들의 점수를 입력받아서, 
-		 * 최고 점수 및 평균 점수를 구하는 프로그램입니다. 
-		 * 실행결과를 보고, 알맞게 작성해보세요.
-		 */
+		
 		boolean run = true;	//while 절 사용하기 위해 선언
 		int[] score = null; // 점수 목록 만들기 위해 배열로 선언
 		int studentNum = 0; // 학생수 받을 변수
