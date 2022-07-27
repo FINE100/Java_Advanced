@@ -10,11 +10,16 @@ public class Employee {
 	public Employee() {
 		
 	}
+	public Employee(String name, int salary) {
+		this.name = name;
+		this.salary = salary;
+		
+		
+	}
 
 	// 메소드
 	public void getInformation(String name, int salary) {
-		this.name = name;
-		this.salary = salary;
+		System.out.printf("이름 : %5S, 연봉 : %d", name, salary);
 		
     }
 	public void print() {
@@ -29,14 +34,12 @@ public class Employee {
 		return salary;
 	}
 
-	@Override
-	public String toString() {
-		return "Employee [toString()=" + super.toString() + "]";
-	}
-	
-	
 	
 	}
+	
+	
+	
+	
 
 
 
