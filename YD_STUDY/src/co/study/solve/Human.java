@@ -7,14 +7,20 @@ public class Human {
 	public double weight;
 	
 	//생성자
-	public Human() {}
+	public Human(String name,double height,double weight) {
+		this.name = name;
+		this.height = height;
+		this.weight = weight; 
+	}
 	
 	//메소드
 	
 	public void getInformation(String name,double height,double weight) {
 		System.out.printf("이름 : %5S, 키 : %f, 몸무게 : %f ", name, height, weight);
 	}
-	
-	
-}
+
+
+		
+	}
+
 
