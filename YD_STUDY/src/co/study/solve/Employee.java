@@ -10,12 +10,6 @@ public class Employee {
 	public Employee() {
 		
 	}
-	public Employee(String name, int salary) {
-		this.name = name;
-		this.salary = salary;
-		
-		
-	}
 
 	// 메소드
 	public void getInformation(String name, int salary) {
@@ -26,17 +20,7 @@ public class Employee {
 		System.out.println("수퍼클래스");
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public int getSalary() {
-		return salary;
-	}
-
-	
-	}
-	
+}	
 	
 	
 	
