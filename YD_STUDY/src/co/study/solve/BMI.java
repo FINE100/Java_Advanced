@@ -13,7 +13,7 @@ public class BMI {
 	   human = new ObesityInfo("박둘이",168,90);
 	   
 	   ((ObesityInfo)human).getObesity();
-	   human.getObesity();
+	 //  human.getObesity();
 	   System.out.println();
 	   
 	
