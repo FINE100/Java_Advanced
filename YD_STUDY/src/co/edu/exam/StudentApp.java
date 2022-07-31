@@ -51,7 +51,7 @@ public class StudentApp {
 				  }
 			  }
 			  
-			  if(selectNo == 2) {
+			  else if(selectNo == 2) {
 				  System.out.println("정보 수정이 필요한 학생 번호를 입력하세요");
 				  int studentNo = Integer.parseInt(scn.nextLine());
 				  
@@ -63,8 +63,25 @@ public class StudentApp {
 				  System.out.println("수정 되었습니다.");
 			  }
 			  
+				  else if (selectNo == 3) {
+						List<Student> studentAry = studentList();
+						for (int i = 0; i < studentAry.size(); i++) {
+							System.out.println(studentAry.get(i).toString());
+			  }
 			  
-		  }
+				  }
+
+				  else if(selectNo == 4){
+					  System.out.println("시스템 종료");
+					  break;
+				  }
+		  
+				  else { 
+					  System.out.println("잘못 선택하셨습니다.");
+					  return;
+				  } 
+			  }
+		  
 		   
 		   
 		  

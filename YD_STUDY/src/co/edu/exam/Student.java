@@ -42,6 +42,11 @@ public class Student {
 	public void setScore(int score) {
 		this.score = score;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [학생번호 : " + StudentNo + ", 이름 : " + name + ", 점수 : " + score + "]";
+	}
 	 
 	 
 
