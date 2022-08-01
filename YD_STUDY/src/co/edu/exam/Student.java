@@ -12,7 +12,11 @@ public class Student {
 	 public Student(int StudentNo, String name, int score) {
 		 this.StudentNo = StudentNo;
 		 this.name = name;
-		 this.score = score;
+		 this.score = score;}
+		 
+		 public Student(int StudentNo, int score) {
+			 this.StudentNo = StudentNo;
+			 this.score = score;
 		 
 		 	 
 	 }
