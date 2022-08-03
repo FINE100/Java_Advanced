@@ -14,6 +14,34 @@ public class Homework5 {
 		int num3 = num2 - 3;
 		
 		System.out.println("각 자리 수의 합은 "+num1+num2+num3);
+		
+/* 강사님 풀이
+ * int val = 373; 
+ * 
+ * int val2 = 373/100;                    // 3 
+ * 
+ * int val3 = (373-(va2*100))/10            // 7
+ *             
+ * 
+ * int val4 = (373-(val2*100)-(val3*10);  //3 
+ *              373 - 300 - 70 = 3  
+ * 
+ * 
+ * 		
+ */
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	
 //		int sum = 0;
 //		while (value > 0) {

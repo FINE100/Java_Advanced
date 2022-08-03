@@ -3,6 +3,7 @@ package co.study.ex;
 import java.util.Scanner;
 
 public class Homework18 {
+	// co.study.ex 에 동일명 풀이 있음
 
 	// 문제1) 다음은 키보드로부터 상품 수와 상품 가격을 입력받아서
 		// 최고 가격을 가지는 제품과 해당 제품을 제외한 제품들의 총 합을 구하는 프로그램을 작성하세요.

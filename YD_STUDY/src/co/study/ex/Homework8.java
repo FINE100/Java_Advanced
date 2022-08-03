@@ -13,6 +13,31 @@ public class Homework8 {
 		int intResult = (val>0) ? val : 0; 
 			System.out.printf("결과는 %d 입니다.%n" , intResult);
 			
+			
+			
+/* 교수님 풀이
+ * int var = -2;
+ * int var = var>0 ? var : 0; 
+ * 
+ * 
+ * //이렇게 긴 조건문을 위의 한주로 줄일 수 있음.
+ *  	if(var>0){
+ * 		System.out.printf(var);
+ * 		} else {
+ * 			System.out.println(0);
+ * 		}
+ * 
+ *  // 삼항 연산자를 메소드로 리턴해서 쓸 수도 있다.
+ * 		public int exam() { 
+ *  		return var<0 > var : 0 ;
+ *  	 }
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+			
 	
 				
 	/* 문제 5) 다음과 같이 두 개의 정수가 주어졌을 경우 
