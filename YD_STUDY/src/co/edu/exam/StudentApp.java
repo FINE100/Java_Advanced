@@ -60,7 +60,7 @@ public class StudentApp {
               System.out.println("수정할 성적 정보를 입력하세요.");
               int modiScore = Integer.parseInt(scn.nextLine());
               
-              Student student = new Student(modiNo,modiScore);                   
+              Student student = new Student(modiNo, modiScore);                   
               modifyStudent(modiNo, modiScore);
               
               System.out.println("수정 되었습니다.");
@@ -96,10 +96,10 @@ public void addStudent(Student student) {
 }
 
  // 수정
-public void modifyStudent(int modiNo, int modiScore) {
-	for (int i = 0; i < studentAry.size(); i++) {
-	      if (modiNo == studentAry.get(i).getStudentNo()) {
-	         studentAry.get(i).setScore(modiScore);
+public void modifyStudent(int modiNo, int modiScore) { // 수정해야 할 매개변수 넣기
+	for (int i = 0; i < studentAry.size(); i++) { 
+	      if (modiNo == studentAry.get(i).getStudentNo()) { // 번호 = arraylist에 들어가있는 학생 번호
+	         studentAry.get(i).setScore(modiScore); //arraylast에 들어가있는 점수를 수정할 점수로 변경하기
 	      }
 	}
 	   	
