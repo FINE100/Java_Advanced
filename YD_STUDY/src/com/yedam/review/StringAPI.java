@@ -33,6 +33,7 @@ public class StringAPI {
 		sb.append("aaa");
 		// 100번지
 		sb.append("bb"); // 같은 메모리 주소 안에 값을 다 넣을 수 있음
+
 		System.out.println(sb);
 
 		StringBuffer sb1 = new StringBuffer("abc");
@@ -48,35 +49,5 @@ public class StringAPI {
 
 		System.out.println("s1.equals(s2)" + s1.equals(s2)); // true
 
-// 주민등록번호에서 데이터 추출하기
-
-// 주민등록번호를 통한 나이 구하기
-// 6자리 - 7 자리  -> Scnner 데이터 ( 예. 000000 - 1234567 )
-//               -> 나이 구하시오.
-//                -> 91212 -> 1999 (범위 : 1924~2022까지)
-//	              ->  981212-1578987 -> ~살
-//		          ->  010228-4785475 -> ~살
-//		          ->  000815-3857432 -> ~살
-
-		Scanner scn = new Scanner(System.in);
-		
-		LocalDate now = LocalDate.now(); // 현재 날짜 구하는 메소드
-		now.getYear();// 년도만 볼 수 있는 메소드
-		int age = 0;
-		
-		System.out.println("생년월일를 입력하세요(YYMMDD). >>"); //입력 포맷 안내해줘야 substring 제대로 할 수 있음~~!
-		String personal = scn.nextLine();
-		int birth = Integer.parseInt(personal.substring(0, 2)); // int 형변환할 때는 Integer 사용(***) 
-		//System.out.println(birth);
-
-		// 조건 :) 991212 -> 1999 (범위 : 1924~2023까지)
-		
-		if (24 <= birth && birth <= 99) { 
-			age = now.getYear() - (birth + 1900) + 1; // 현재 년도 - (추출한 년도 + 1900) + 1; 
-		} else if (00 <= birth && birth <= 22) {
-			age = now.getYear() - (birth + 2000) + 1;
-		}
-		System.out.println("나이는 " + age + "입니다.");
 	}
-
 }
