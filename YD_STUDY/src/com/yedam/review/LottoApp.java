@@ -1,6 +1,5 @@
 package com.yedam.review;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -15,99 +14,110 @@ import java.util.Scanner;
 
 public class LottoApp {
 
-	Scanner scn = new Scanner(System.in);
-		
-		int menu = 0;
-		
-		List<int[]> list = new ArrayList<>();
-		
-		public LottoApp() {
-//			run();
-		}	
-}
+	Scanner sc = new Scanner(System.in);
 
+	int menu = 0;
+
+	List<int[]> list = new ArrayList<>();
+
+	public LottoApp() {
+		run();
+	}
+
+	// private : 캡슐화, 정보은닉 (메소드 안에서만 실행)
+	private void run() {
+
+		while (menu != 99) {
+			// 메뉴실행 
+			menuInfo();
+			menu = Integer.parseInt(sc.nextLine());
+			switch (menu) {
+			case 1:
+				makeLotto();
+				break;
+			case 2:
+				showInfo();
+				break;
+
+			case 99:
+				System.out.println("프로그램 종료");
+				break;
+			}
+		}
+
+	}
+
+	private void menuInfo() {
+		System.out.println("메뉴를 선택해주세요.\n");
+		System.out.println("1. 로또생성 2. 로또조회 99. 프로그램 종료");
+	}
+
+	private void makeLotto() {
+
+		System.out.println("금액을 투입해주세요.");
+
+		int money;
+
+		money = Integer.parseInt(sc.nextLine());
+
+		for (int i = 0; i < (money / 1000); i++) {
+			list.add(makeNumber());
+		}
+
+		System.out.println("번호 출력 완료\n");
+	}
+
+	private void showInfo() {
+
+		System.out.println("구매 한 금액> " + (list.size() * 1000) + "원");
+
+		for (int i = 0; i < list.size(); i++) {
+			// 1번, 2번
+			System.out.print((i % 5 + 1) + "번>");
+			// 로또 번호 출력
+			for (int j = 0; j < 6; j++) {
+				System.out.print(list.get(i)[j] + " ");
+			}
+
+			System.out.println();
+			// &&, &
+			// i=0, i % 5 == 0
+			if ((i + 1) % 5 == 0) {
+				System.out.println("-------------------------------------");
+			}
+		}
+	}
+
+	private int[] makeNumber() {
 		
-//	private void run() {
+		int[] lottoNo = new int[6];
+
+		for (int i = 0; i < 6; i++) {
+			
+			// int randomNo = (int) (Math.random() * 45) + 1;
+			lottoNo[i] = (int)(Math.random() * 45) + 1;			
+
+			//첫번째 값은 중복체크 할 필요 없음.	
+			// i = 4
+			if (i > 0) { // 지워도 돌아감 
+				// j =0~3, i =4
+				// lottoNo[0] <=> lottoNo[4]
+				// lottoNo[1] <=> lottoNo[4]
+				// lottoNo[2] <=> lottoNo[4]
+				// lottoNo[3] <=> lottoNo[4]	
+				// lottoNo[3] -> lottoNo[4] 덮어쓰기 
+				for (int j = 0; j < i; j++) {				
+					
+					if (lottoNo[j] == lottoNo[i]) {
+						i -= 1;
+						System.out.println("중복제거!");
+				
+					}
+				}
+			}
+		}
 		
-//		while (menu != 99) {
-//			menuInfo();
-//			menu = Integer.parseInt(scn.nextLine());
-//
-//		switch (menu) {
-//
-//			case 1:
-//				System.out.println("금액을 투입해주세요");				
-//				money = Integer.parseInt(scn.nextLine());
-//				System.out.println("번호 출력 완료");
-//				break;
-//
-//			case 2:
-//				System.out.println("구매한 금액 " + money);
-//			  // 금액에 따른 출력 횟수. ?????
-//			  
-//			    
-//				
-//					
-//					System.out.println(randomNo);
-//
-//				}
-//				
-//			case 99 : 
-//				System.out.println("프로그램 종료");
-//				flag = false;
-//			}
-//		}
-//	}
-//}
-//private void showInfo() {
-//	System.out.println("구매한 금액 >" +(list.size()*1000)+"원");
-//	
-//	for(int i =0 ; i< list.size(); i++) {
-//		// 1번, 2번
-//		System.out.print((i%5+1)+ "번>");
-//		//로또 번호 출력
-//		for(int j = 0 ; j < 6; j++) {
-//			System.out.println(list.get(i)[j]+ " ");
-//		}
-//		
-//		System.out.println();
-//		// &&, &
-//	
-//		if((i+1)!=0 && (i+1)%5 == 0){
-//			System.out.println("--------------------------------");
-//		}
-//	}	
-//		
-//	}
-//
-//
-//private void makeNumber () {
-//	int[] lottoNo = new int[6];
-//	for (int i = 0; i < 6; i++) {
-//	int randomNo = (int) (Math.random() * 45) + 1; // 임의의 번호 출력 
-//	
-//	// 첫번째 값은 중복 체크할 필요 없음.
-//	if (i > 0) {
-//		
-//						//j=0, i번째까지, (ex) i = 3 (index = 0,1,2)
-//		for (int j = 0; j < i; j++) {
-//			// (예) 배열에 있는 값 : 30, 40, 20
-//			// (예) randomNo : 30 			
-//			if (lottoNo[j] == randomNo) {
-//				i -= 1;   // 다음 인덱스로 넘어가는 값을 -1해서 다시 동일한 인덱스 값 찾을 수 있도록 해줌. 
-//						//(3번째 인덱스 중복 -> 4번째 -1 -> 3번째 다시 찾기)	
-//				
-//				System.out.println("중복제거!");
-//				break;
-//			}else if((j+1)==i) {
-//				lottoNo[i] = randomNo;
-//			}
-//		}
-//		lottoNo[i] = randomNo;
-//	} else {
-//		lottoNo[i] = randomNo;
-//	}
-//	}
-////	return lottoNo;
-//}
-//}
+		
+		return lottoNo;
+	}
+}
