@@ -34,5 +34,20 @@ public class StringAPI {
 		// 100번지
 		sb.append("bb"); // 같은 메모리 주소 안에 값을 다 넣을 수 있음
 
+		System.out.println(sb);
+
+		StringBuffer sb1 = new StringBuffer("abc");
+		StringBuffer sb2 = new StringBuffer("abc");
+
+		System.out.println("sb1== sb2 ? " + (sb1 == sb2)); // false
+
+		System.out.println("sb.equals(sb2)?" + sb1.equals(sb2)); // false
+
+		// StringBuffer의 내용을 String으로 변환한다.
+		String s1 = sb.toString();
+		String s2 = sb.toString();
+
+		System.out.println("s1.equals(s2)" + s1.equals(s2)); // true
+
 	}
 }

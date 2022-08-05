@@ -17,7 +17,6 @@ public class Student {
 		 public Student(int StudentNo, int score) {
 			 this.StudentNo = StudentNo;
 			 this.score = score;
-		 
 		 	 
 	 }
 	 
