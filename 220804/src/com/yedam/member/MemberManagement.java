@@ -17,7 +17,8 @@ public class MemberManagement extends DAO {
 
 	public static MemberManagement getInstance() {
 		if (mm == null) {
-			return new MemberManagement();
+			mm = new MemberManagement();
+			return mm;
 		} else {
 			return mm;
 
