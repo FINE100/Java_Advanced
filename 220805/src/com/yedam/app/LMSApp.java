@@ -7,7 +7,7 @@ import com.yedam.member.MemberService;
 import com.yedam.student.StudentDTO;
 import com.yedam.student.StudentService;
 
-public class LMSApp {
+public class LMSApp {// 학습 관리시스템
 	MemberService ms = new MemberService();
 	StudentService ss = new StudentService();
 	Scanner scn = new Scanner(System.in);
@@ -65,7 +65,7 @@ public class LMSApp {
 					
 					std.setStudentId(id);
 					std.setStudentName(name);
-					std.setStudentClass(tel);
+					std.setStudentClass(lecture);
 					std.setStudentAddr(addr);
 					std.setStudentTel(tel);
 					

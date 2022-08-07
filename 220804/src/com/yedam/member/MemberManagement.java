@@ -95,7 +95,7 @@ public class MemberManagement extends DAO {
 			// String sql = "insert into member (id,pw) values (?,?)"; insert문 두개 다 가능.
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, member.getId());
-			pstmt.setString(2, member.getName());
+			pstmt.setString(2, member.getPw());
 			pstmt.setString(3, member.getPw());
 
 			result = pstmt.executeUpdate();

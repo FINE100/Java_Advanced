@@ -5,7 +5,7 @@ package com.yedam.member;
 public class MemberService {
 
 	public MemberDTO doLogin(MemberDTO member) {
-		// DTO에 정의한 쿼리로 로그인 될 수 있도록 정의
+		// DTO, manager에 정의한 쿼리로 로그인 될 수 있도록 정의
 		// 관리를 용이하게 하기 위해 1. 데이터 불러오는 부분 2. 기능 정의하는 부분 나눔
 		MemberDTO mem = MemberManage.getInstance().login(member);
 		if (mem == null) {

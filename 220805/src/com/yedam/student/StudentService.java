@@ -18,7 +18,8 @@ public class StudentService {
 	// 1. 학생 등록
 	public void insertStudent(StudentDTO std) {
 		int result = StudentManage.getInstance().insertStudnet(std);
-		if (result == 1) {
+		// rsult == 1의 의미 : 1행 삽입 성공 
+		  if(result == 1) {
 			System.out.println("학생 정보 입력 성공");
 		} else {
 			System.out.println("학생 정보 입력 실패");
@@ -59,6 +60,7 @@ public class StudentService {
 
 	}
 	
+	// 학생 정보 수정 (전화번호 수정)
 	public void updateTel() {
 		
 		StudentDTO std = new StudentDTO();
@@ -80,7 +82,7 @@ public class StudentService {
 	//학생 정보 조회
 	public StudentDTO getStudent(StudentDTO std) {
 		
-	    return StudentManage.getInstance().getsudent(std.getStudentId()); // 조회하는 값 반환
+	    return StudentManage.getInstance().getstudent(std.getStudentId()); // 조회하는 값 반환
 	}
 	
 	public void checkResult(int value) {

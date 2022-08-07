@@ -136,7 +136,7 @@ public class StudentManage extends DAO {
 		}
 		
 		// 학생 정보 조회 (단건 조회)
-		public StudentDTO getsudent(int id) {
+		public StudentDTO getstudent(int id) {
 			StudentDTO std = null;
 			try {
 				conn();

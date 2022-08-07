@@ -1,4 +1,5 @@
 package com.yedam.member;
+/*  테이블에 맞게 필드, 게터 세터 작성 */
 
 public class MemberDTO {
 	/*MEMBER_ID     NOT NULL VARCHAR2(20)  

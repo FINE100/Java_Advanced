@@ -1,10 +1,12 @@
 package com.yedam.member;
+//member 관련 sql(database)를 다 작성, data 담아두는 곳
 
 //다른 패키지라 import 
 import com.yedam.common.DAO;
 
-// member 관련 sql(database)를 다 작성, data 담아두는 곳
+
 public class MemberManage extends DAO{ 
+	
 	// 싱글톤 
 	private static MemberManage mm = null; 
 	//null도 하나의 데이터. 초기화하기 위해 사용.
@@ -24,6 +26,8 @@ public class MemberManage extends DAO{
 		} 
 			return mm;
 		}
+	
+	
 	
 	public MemberDTO login(MemberDTO member) {
 		MemberDTO mem = null;
