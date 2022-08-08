@@ -1,6 +1,9 @@
 package com.bank.account;
 
+import java.util.List;
 import java.util.Scanner;
+
+import com.bank.member.MemberService;
 
 public class AccountService {
 
@@ -25,6 +28,14 @@ public class AccountService {
 		ac.setAccountId(accountId);
 		ac.setMemberId(customtId);
 		
+		//계좌 등록 메소드
+		
+		int result = AccountManage.getInstance().insertAccount(ac);
+		if(result == 1) {
+			System.out.println("계좌 등록 완료");
+		}else {
+			System.out.println("계좌 등록 실패");
+		}
 		
 	}
 	
@@ -47,6 +58,7 @@ public class AccountService {
 		}
 		
 		int money = Integer.parseInt(scn.nextLine());
+		
 		account.setAccountId(accountId);
 		account.setBalance(money);
 		
@@ -62,7 +74,7 @@ public class AccountService {
 	// 3. 계좌 해지 -> delete 
 	public void deleteAccount() {
 		System.out.println("======== 계좌 해지 =========");
-		System.out.println("계좌 입력 > ");
+		System.out.println("계좌번호 입력 > ");
 		String accountId = scn.nextLine();
 		
 		int result = AccountManage.getInstance().delAccount(accountId);
@@ -100,6 +112,18 @@ public class AccountService {
 		
 		AccountManage.getInstance().transferMoney(ToAccountId, FromAccountId, balance);
 		
+		
+	}
+	// 계좌 조회
+	public void getAccount() {
+		List<Account> list = AccountManage.getInstance().getAccountList(MemberService.memberInfo.getMemberId());
+		System.out.println(MemberService.memberInfo.getMemberName() + "님의 계좌 정보");
+		System.out.println();
+		for(Account account : list) {
+			System.out.println("계좌 ID >> " + account.getAccountId());
+			System.out.println("잔고 >> " + account.getBalance());
+			System.out.println("생성일 >> " + account.getCredate());
+		}
 		
 	}
 		

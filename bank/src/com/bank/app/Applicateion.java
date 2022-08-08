@@ -20,14 +20,12 @@ public class Applicateion {
 		switch(menuNo) {
 		case 1:
 			// 로그인 하는 기능 : member 관련... 
+			//System.out.println(MemberService.memberInfo.getMemberName());
 			ms.doLogin();
 			if(MemberService.memberInfo != null) {
 				new ManageMent();
 			}
-			
-			
-			
-			System.out.println(MemberService.memberInfo.getMemberName());
+						
 			break;
 			
 		case 2:
